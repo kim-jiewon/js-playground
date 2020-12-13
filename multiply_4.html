@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <h1>반목문을 사용한 구구단 연습</h1>
+    <input type="text" id="num" value=""><br>
+    <button onclick="run()">확인</button>
     <script>
-        var number = Number(prompt("숫자를 입력하세요"));
-        var i = 1;
-        document.write("<h1> 구구단 " + number + " 구현</h1>" + "<br>");
+        function run(){
+            var number = document.getElementById("num").value;
+            var i = 1;
+            document.write("<h1> 구구단 " + number + " 구현" + "<br>");
 
-        while(i<=9){
-            document.write(number + " * " + i + "=" + number * i + "<br>");
-            i++;
+            while(i<=9){
+                document.write(number + " * " + i + "=" + number * i + "<br>");
+                i++;
+            }
         }
+    
         
     </script>    
 </body>
